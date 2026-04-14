@@ -30,8 +30,7 @@
             background: var(--bg);
             color: var(--ink);
             font-family: "Inter", sans-serif;
-           
-            overflow-y: auto;
+            overflow: hidden;
         }
 
         .font-walden { font-family: "EB Garamond", serif; }
@@ -356,15 +355,10 @@ Carrying on a collaborative mindset and deep cultural intelligence, I am a Creat
                 const target = item.getAttribute('data-target');
                 document.getElementById(target).classList.add('visible');
             });
-            
             item.addEventListener('mouseleave', () => {
                 items.forEach(i => i.classList.remove('inactive'));
                 previews.forEach(p => p.classList.remove('visible'));
             });
-
-    item.addEventListener('mouseenter', activate);
-    item.addEventListener('click', activate); // ✅ mobile fix
-
         });
 
       
