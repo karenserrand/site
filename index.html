@@ -349,6 +349,8 @@ Carrying on a collaborative mindset and deep cultural intelligence, I am a Creat
         items.forEach(item => {
             item.addEventListener('mouseenter', () => {
                 items.forEach(i => i.classList.remove('active'));
+                item.addEventListener('click', triggerAction);
+
                 previews.forEach(p => p.classList.remove('visible'));
 
                 item.classList.add('active');
